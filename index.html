@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fazaia College Student Registration Form</title>
+  <style>
+    body{font-family: Arial, Helvetica, sans-serif; background:#f4f6f8; color:#222; margin:20px}
+    .container{width:720px; margin:18px auto; background:#fff; padding:18px; border-radius:6px; box-shadow:0 4px 14px rgba(15,20,25,0.06)}
+    .header{display:flex; align-items:center; justify-content:center; gap:16px; flex-direction:column; text-align:center}
+    .logo{width:56px; height:56px; display:inline-block}
+    :root{--accent:#0b4ea2;} /* AU-like navy */
+    .logo-img{width:72px; height:72px; object-fit:contain; border-radius:6px}
+    .header .title{line-height:1}
+    h2{margin:0; font-size:18px}
+    h3{margin:6px 0 0 0; font-size:13px; letter-spacing:1px}
+    .form-table{width:100%; border-collapse:collapse}
+    .form-table td{padding:10px 8px; vertical-align:middle}
+    .form-table td:first-child{width:30%; font-weight:600; color:#333; padding-right:12px}
+    input[type=text], input[type=email], input[type=tel], select, textarea, input[type=date]{width:100%; padding:8px; border:1px solid #d0d6db; border-radius:4px; font-size:14px}
+    textarea{min-height:110px; resize:vertical; line-height:1.5; font-family:inherit; padding:10px; border:1px solid #d0d7de; border-radius:4px; background:#fbfcfe}
+    
+    .logo-left{float:left; margin-right:12px}
+    .title-block h2 {margin:0; font-size:18px}
+    .title-block h3 {margin:4px 0 0 0; font-size:14px; color:var(--accent)}
+   
+    input[type="submit"], input[type="reset"]{background:var(--accent); border:0; color:#fff; padding:8px 16px; border-radius:4px}
+    input[type="reset"]{background:#6c757d}
+    input[type=submit]{padding:8px 20px; border-radius:4px; border:1px solid #1b74a6; background:#1b74a6; color:#fff; cursor:pointer}
+    input[type=reset]{padding:8px 18px; border-radius:4px; border:1px solid #cfcfcf; background:#f7f7f7; color:#333; cursor:pointer}
+    .buttons td{border:none}
+    .form-actions{display:flex; justify-content:space-between; align-items:center; margin:12px auto 0; max-width:360px}
+    hr{border:none; border-top:1px solid #e6e9ec; margin:12px 0}
+    small{color:#6b6f74}
+    @media (min-width:600px){ .header{flex-direction:row} .header .title{text-align:center} }
+  </style>
+</head>
+<body>
+  <div class="container">
+  <table align="center" width="720" cellpadding="0" cellspacing="0" border="0">
+    <tr>
+      <td>
+        <table width="100%" cellpadding="12" cellspacing="0" border="0">
+          <tr>
+            <td align="center">
+              <table cellpadding="6" cellspacing="0" border="0" class="header">
+                <tr>
+                  <td align="center" valign="middle">
+                      <div class="logo logo-left"><img src="https://upload.wikimedia.org/wikipedia/en/6/61/Air_University_Pakistan_Insignia.png" alt="Air University logo" class="logo-img" /></div>
+                  </td>
+                  <td align="center" class="title">
+                    <h2>Fazaia College of Education for Women, Peshawar</h2>
+                    <div>Affiliated with Air University, Islamabad</div>
+                    <h3>STUDENT REGISTRATION FORM</h3>
+                  </td>
+                </tr>
+              </table>
+              <hr />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <form action="#" method="post">
+                <table class="form-table" width="100%" cellpadding="8" cellspacing="0" border="0">
+                  <tr><td colspan="2"><strong>Personal Details</strong></td></tr>
+                  <tr>
+                    <td width="30%"><strong>Student Name</strong></td>
+                    <td><input type="text" name="studentName" placeholder="Enter full name" required /></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Father Name</strong></td>
+                    <td><input type="text" name="fatherName" placeholder="Father's full name" required /></td>
+                  </tr>
+                  <tr>
+                    <td><strong>CNIC / B-Form No</strong></td>
+                    <td><input type="text" name="cnic" placeholder="1234512345671" maxlength="13" pattern="[0-9]{13}" /></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Registration No</strong></td>
+                    <td><input type="text" name="regNo" placeholder="Registration number (if any)" /></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Roll Number</strong></td>
+                    <td><input type="text" name="rollNumber" placeholder="Roll number" /></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Date of Birth</strong></td>
+                    <td><input type="date" name="dob" /></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gender</strong></td>
+                    <td>
+                      <label><input type="radio" name="gender" value="male" /> Male</label>
+                      &nbsp;&nbsp;
+                      <label><input type="radio" name="gender" value="female" /> Female</label>
+                    </td>
+                  </tr>
+
+                  <tr><td colspan="2"><hr /></td></tr>
+                  <tr><td colspan="2"><strong>Contact & Course</strong></td></tr>
+                  <tr>
+                    <td><strong>Email</strong></td>
+                    <td><input type="email" name="email" placeholder="example@email.com" /></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Phone Number</strong></td>
+                    <td><input type="tel" name="phone" placeholder="03XXXXXXXXX" pattern="[0-9]{10,11}" maxlength="11" /></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Course</strong></td>
+                    <td>
+                      <select name="course">
+                        <option>BS Computer Science</option>
+                        <option>BS Information Technology</option>
+                        <option>BBA</option>
+                        <option>BA (English)</option>
+                        <option>BSc (Mathematics)</option>
+                      </select>
+                    </td>
+                  </tr>
+
+                  <tr><td colspan="2"><hr /></td></tr>
+                  <tr><td colspan="2"><strong>Address</strong></td></tr>
+                  <tr>
+                    <td><strong>Permanent Address</strong></td>
+                    <td><textarea name="address" rows="3"></textarea></td>
+                  </tr>
+                </table>
+
+                <div class="form-actions">
+                  <div><input type="reset" value="Reset" /></div>
+                  <div><input type="submit" value="Submit" /></div>
+                </div>
+              </form>
+            </td>
+          </tr>
+
+          <tr>
+            <td align="center"><small>Fazaia College Of Education- Registration Form</small></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
